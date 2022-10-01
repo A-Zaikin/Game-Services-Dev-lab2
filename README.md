@@ -27,18 +27,18 @@
 #### Работа 1
 1)	Создать новый проект из шаблона 3D.
 2)	Добавить ассет с моделью дракона из Asset Store в свой аккаунт и импортировать его в проект через Package Manager.
-![](Screenshots/1.jpg)
+!["screenshot"](Screenshots/1.jpg)
 3)	Копировать префаб дракона в нашу папку и поставить на сцену.
-![](Screenshots/2.jpg)
+!["screenshot"](Screenshots/2.jpg)
 4)	Копировать анимацию FlyIdle, создать новый AnimationController, добавить в него анимацию, поставить Controller в компонент Animator дракона. 
-![](Screenshots/3.gif)
+!["screenshot"](Screenshots/3.gif)
 5) Создать сферу, удлиннить её вверх, добавить ей RigidBody (чтобы она падала), сохранить её как префаб Egg.
 6) Скачать и добавить в проект бесплатную текстуру яица, создать материал и настроить его, добавить материал префабу.
-![](Screenshots/4.jpg)
+!["screenshot"](Screenshots/4.jpg)
 7) Создать префаб сферу EnergyShield, добавить текстуру.
-![](Screenshots/5.jpg)
+!["screenshot"](Screenshots/5.jpg)
 #### Работа 2
-![](Screenshots/6.gif)
+!["screenshot"](Screenshots/6.gif)
 1) Переместить камеру, чтобы дракон находился вверху экрана. 
 2) Создать и добавить дракону скрипт:
 ```cs
@@ -93,9 +93,9 @@ namespace DragonPicker
 }
 ``` 
 3) Указать в компоненте параметры:
-![](Screenshots/7.jpg)
+!["screenshot"](Screenshots/7.jpg)
 #### Работа 3
-![](Screenshots/8.gif)
+!["screenshot"](Screenshots/8.gif)
 1) Создать и добавить дракону скрипт:
 ```cs
 using System.Collections;
@@ -130,12 +130,12 @@ namespace DragonPicker
 }
 ```
 2) Настроить скрипт.
-![](Screenshots/9.jpg)
+!["screenshot"](Screenshots/9.jpg)
 3) Создать объект Plane, увеличить, сохранить как префаб Ground, скачать и добавить текстуру и материал.
 #### Работа 4
-![](Screenshots/11.gif)
+!["screenshot"](Screenshots/11.gif)
 1) Скачать и импортировать ассет эффектов.
-![](Screenshots/10.jpg)
+!["screenshot"](Screenshots/10.jpg)
 2) Добавить в Egg скрипт взрыва при столкновении и добавить в него префаб взрыва:
 ```cs
 using UnityEngine;
@@ -156,7 +156,7 @@ namespace DragonPicker
 }
 ```
 3) Создать префаб EnergyShield, который состоит из 3 слоёв с разными значениями Scale.
-![](Screenshots/12.jpg)
+!["screenshot"](Screenshots/12.jpg)
 
 
 
@@ -208,19 +208,19 @@ namespace DragonPicker
 }
 ```
 3) Настроить его.
-![](Screenshots/13.jpg)
+!["screenshot"](Screenshots/13.jpg)
 4) Добавить в события YandexGame ссылки на наши методы.
-![](Screenshots/14.jpg)
+!["screenshot"](Screenshots/14.jpg)
 5) Настроить билд: WebGL Template поставить на PluginYG; отключить Run in background; включить Decompression Fallback в Publishing Settings.
 6) Сделать WebGL билд, запаковать в .zip архив.
 7) Зарегистрироваться на https://games.yandex.ru
 8) Зайти в консоль разработчика, добавить новое приложение и указать поддерживаемые платформы.
-![](Screenshots/15.jpg)
+!["screenshot"](Screenshots/15.jpg)
 9) Добавить архив с билдом в Исходники. Подождать пока его проверят.
-![](Screenshots/16.jpg)
+!["screenshot"](Screenshots/16.jpg)
 10) Теперь игру можно запустить на серверах Yandex по ссылке: https://yandex.ru/games/app/197771?draft=true&lang=ru. SDK подключается, правильно отображается имя игрока. В приватном окне автоматической авторизации не происходит.
 
-![](Screenshots/17.gif)
+!["screenshot"](Screenshots/17.gif)
 
 
 
