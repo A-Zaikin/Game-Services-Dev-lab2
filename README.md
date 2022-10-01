@@ -49,8 +49,6 @@
 
 #### Работа 2
 
-!["screenshot"](Screenshots/6.gif)
-
 1) Переместить камеру, чтобы дракон находился вверху экрана. 
 2) Создать и добавить дракону скрипт:
 ```cs
@@ -108,10 +106,12 @@ namespace DragonPicker
 
 !["screenshot"](Screenshots/7.JPG)
 
+!["screenshot"](Screenshots/6.gif)
+
+
+
+
 #### Работа 3
-
-!["screenshot"](Screenshots/8.gif)
-
 1) Создать и добавить дракону скрипт:
 ```cs
 using System.Collections;
@@ -150,10 +150,12 @@ namespace DragonPicker
 !["screenshot"](Screenshots/9.JPG)
 
 3) Создать объект Plane, увеличить, сохранить как префаб Ground, скачать и добавить текстуру и материал.
+
+
+!["screenshot"](Screenshots/8.gif)
+
+
 #### Работа 4
-
-!["screenshot"](Screenshots/11.gif)
-
 1) Скачать и импортировать ассет эффектов.
 
 !["screenshot"](Screenshots/10.JPG)
@@ -177,6 +179,10 @@ namespace DragonPicker
     }
 }
 ```
+
+!["screenshot"](Screenshots/11.gif)
+
+
 3) Создать префаб EnergyShield, который состоит из 3 слоёв с разными значениями Scale.
 
 !["screenshot"](Screenshots/12.JPG)
