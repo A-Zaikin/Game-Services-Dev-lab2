@@ -159,6 +159,72 @@ namespace DragonPicker
 ![](Screenshots/12.jpg)
 
 
+
+## Задание 2
+### В проект, выполненный в предыдущем задании, добавить систему проверки того, что SDK подключен (доступен в режиме онлайн и отвечает на запросы)
+Ход работы:
+1) Импортировать PluginYG в проект. Добавить на сцену объект YandexGame.
+2) Добавить к новому пустому объекту скрипт:
+```cs
+using UnityEngine;
+using TMPro;
+using YG;
+using System;
+using UnityEngine.Events;
+
+namespace DragonPicker
+{
+    public class YandexSdkManager : MonoBehaviour
+    {
+        [SerializeField] private TextMeshProUGUI textField;
+        [SerializeField] private UnityEvent authorizationCheck;
+
+        private bool isFirstLaunch = true;
+
+        public void ResolvedAuthorization()
+        {
+            textField.text = $"SDK available\nResolved authorization\nPlayer name: \"{YandexGame.playerName}\"";
+        }
+
+        public void RejectedAuthorization()
+        {
+            textField.text = $"SDK available\nRejected authorization";
+        }
+
+        private void OnEnable() => YandexGame.GetDataEvent += SdkDataReceived;
+
+        private void OnDisable() => YandexGame.GetDataEvent -= SdkDataReceived;
+
+        private void SdkDataReceived()
+        {
+            if (YandexGame.SDKEnabled && isFirstLaunch)
+            {
+                textField.text = $"SDK available\nWaiting for authorization...";
+                authorizationCheck?.Invoke();
+                isFirstLaunch = false;
+            }
+        }
+    }
+}
+```
+3) Настроить его.
+![](Screenshots/13.jpg)
+4) Добавить в события YandexGame ссылки на наши методы.
+![](Screenshots/14.jpg)
+5) Настроить билд: WebGL Template поставить на PluginYG; отключить Run in background; включить Decompression Fallback в Publishing Settings.
+6) Сделать WebGL билд, запаковать в .zip архив.
+7) Зарегистрироваться на https://games.yandex.ru
+8) Зайти в консоль разработчика, добавить новое приложение и указать поддерживаемые платформы.
+![](Screenshots/15.jpg)
+9) Добавить архив с билдом в Исходники. Подождать пока его проверят.
+![](Screenshots/16.jpg)
+10) Теперь игру можно запустить на серверах Yandex. SDK подключается, правильно отображается имя игрока. В приватном окне автоматической авторизации не происходит.
+
+![](Screenshots/17.gif)
+
+
+
+
 ## Выводы
 
 Ознакомился с основными функциями Unity и взаимодействием с объектами внутри редактора. Ознакомился с правилами оформления отчёта.
